@@ -1,4 +1,3 @@
-export const  logo = 'telegram-cloud-document-2-5325675080997427588.png'
 export const img = 'https://s3-alpha-sig.figma.com/img/e595/7d61/242bd56b96ae0c48f8e9d2ba021b26ce?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F~jWPoERJNdn84VWqQDchuAIvV123hQH77VjFxMSCgr~UmYLhpQTS1D7vobuEUi4p8X889BmcuFqxhO017MI9vRlBP0ARadNNVAfz304RTLFY0zVFVeVpY8zKUYIylHclaVUSh2EFQoKjCMOv03BM6Oz8T7IpCVrxUIoyvZh7UEUzrNgEnSXh~~LE2ov14cW66UFCT-RrCrHXHDECd6Af19aNFeaGpuA1DJVrvR1ammeJV47pKkhZLOB48QEicZQiBqq9v3ifYQ0xgLnIF7kawnqqkMIc1HUmbvs1gKEMw3hq71PxXKgGCshfXaiSdgmDbN8LJV3PvQWbsjAFfEbAg__'
 export const internet = 'https://raw.githubusercontent.com/sakiynam/icon/84edbb09c98a708aad1ebeac22896e2618ef1221/Vector%20(5).svg'
 export const instagram = 'https://raw.githubusercontent.com/sakiynam/icon/84edbb09c98a708aad1ebeac22896e2618ef1221/ion_logo-instagram.svg'

@@ -18,6 +18,15 @@ function Form() {
     const numofEmployeesRef = useRef('');
     const descRef = useRef('');  
 
+    const validateEmail = (email) =>{
+        return String(email)
+            .toLowerCase()
+            .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+        };
+    
+
     function validate(nameRef, emailRef, numberRef, countryRef) {
         if (!nameRef.current.value) {
             nameRef.current.focus();
@@ -25,7 +34,7 @@ function Form() {
             return false;
         }
 
-        if (!emailRef.current.value) {
+        if (!(validateEmail(emailRef.current.value))) {
             emailRef.current.focus();
             alert('Email is empty');
             return false;
@@ -64,16 +73,16 @@ function Form() {
         </div>
 
         <form>
-            <label htmlFor="">Kompaniya nomi*</label><br />
+            <label htmlFor="">Kompaniya nomi<span>*</span></label><br />
             <input type="text" placeholder='Kompaniya nomi' ref={nameRef} />
 
-            <label htmlFor="">Email*</label>
+            <label htmlFor="">Email<span>*</span></label>
             <input type="email" placeholder='Email' ref={emailRef}/>
 
-            <label htmlFor="">Telefon raqami*</label>
+            <label htmlFor="">Telefon raqami<span>*</span></label>
             <input type="number" placeholder='UZ +9989' ref={numberRef}/>
 
-            <label htmlFor="">Linklar*</label>
+            <label htmlFor="">Linklar<span>*</span></label>
             <div className="links">
                 <div className="icon">
                     <img src={internet} alt="ss" />
@@ -93,20 +102,23 @@ function Form() {
             </div>
 
             <div className="count_city">
-                <label htmlFor="">Davlat*</label>
-                <input type="text" placeholder='Davlat' ref={countryRef}/>
-
-                <label htmlFor="">Shahar*</label>
-                <input type="text" placeholder='Shahar' ref={cityRef}/>
+                <div className="count">
+                    <label htmlFor="">Davlat<span>*</span></label>
+                    <input type="text" placeholder='Davlat' ref={countryRef}/>
+                </div>
+                <div className="city">
+                    <label htmlFor="">Shahar<span>*</span></label>
+                    <input type="text" placeholder='Shahar' ref={cityRef}/>
+                </div>
             </div>
 
-            <label htmlFor="">Yashash joyi*</label>
-            <input type="text" ref={addressRef}/>
+            <label htmlFor="">Yashash joyi<span>*</span></label>
+            <input type="text" ref={addressRef} placeholder='Joy'/>
 
-            <label htmlFor="">Hodimlar soni*</label>
+            <label htmlFor="">Hodimlar soni<span>*</span></label>
             <input type="text" placeholder='Hodimlar soni' ref={numofEmployeesRef}/>
 
-            <label htmlFor="">Izoh*</label>
+            <label htmlFor="">Izoh<span>*</span></label>
             <textarea name="" id="" cols="30" rows="10" placeholder='Kompaniya haqida izoh qoldiring' ref={descRef}></textarea>
 
             <div className="btns">

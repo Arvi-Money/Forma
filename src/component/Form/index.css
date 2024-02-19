@@ -11,19 +11,19 @@ h1{
     font-size: 32px;
     color:#2A2941;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 p{
     color:#B3B3B3;
     font-size: 16px;
-    margin-bottom: 2rem;
 }
 
 .img{
     display: flex;
     gap: 1rem;
     align-items: center;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -37,7 +37,7 @@ p{
     color:#5361E4;
     font-size: 16px;
     font-weight: 500;
-    align-items: flex-end;
+    font-style: bold;
 }
 
 
@@ -54,11 +54,15 @@ p{
     border: 1px solid #B3B3B3;
 }
 
-/* .count_city{
+.count_city{
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
-} */
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.count, .city{
+    width: 50%;
+}
 
 .btns{
     display: flex;
@@ -81,4 +85,12 @@ p{
   .btns .forward{
     background-color: #5361E4;
     color: #fff;
+  }
+
+  span{
+    color: red;
+  }
+
+  textarea{
+    resize: none;
   }
